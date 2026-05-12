@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이핑 가든 설정</title>
+    <link rel="stylesheet" href="settings.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>타이핑 가든 🌿</h1>
+            <p>타이핑을 할 때마다 화면에 예쁜 정원이 자라납니다.</p>
+        </div>
+        
+        <div class="card">
+            <div class="setting-group toggle-group">
+                <label class="switch-label">
+                    <span class="setting-title">기능 켜기/끄기</span>
+                    <label class="switch">
+                        <input type="checkbox" id="isActive" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </label>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">일반 설정</h2>
+            <div class="setting-group">
+                <label class="setting-title">모니터 선택</label>
+                <select id="displaySelect">
+                    <!-- Options populated by JS -->
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label class="setting-title">식물 종류</label>
+                <select id="plantType">
+                    <option value="all">풀, 꽃, 나무 모두</option>
+                    <option value="grass">풀만</option>
+                    <option value="flower">꽃만</option>
+                    <option value="tree">나무만</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <label class="setting-title">투명도 <span class="val-badge" id="opacityVal">80%</span></label>
+                <input type="range" id="opacity" min="0.1" max="1" step="0.1" value="0.8">
+            </div>
+
+            <div class="setting-group">
+                <label class="setting-title">자라나는 속도 <span class="val-badge" id="growthVal">50</span></label>
+                <input type="range" id="growthSpeed" min="0" max="100" step="1" value="50">
+            </div>
+
+            <div class="setting-group">
+                <label class="setting-title">시드는 속도 <span class="val-badge" id="witherVal">50</span></label>
+                <input type="range" id="witherSpeed" min="0" max="100" step="1" value="50">
+            </div>
+        </div>
+
+        <div class="card nopad">
+            <details>
+                <summary>나무 (Tree) 설정</summary>
+                <div class="details-content">
+                    <div class="setting-group">
+                        <label class="setting-title">생성 비율 <span class="val-badge" id="treeRatioVal">30%</span></label>
+                        <input type="range" id="treeRatio" min="0" max="100" step="5" value="30">
+                    </div>
+                    <div class="setting-group">
+                        <label class="setting-title">나무 높이 <span class="val-badge" id="treeHeightVal">100%</span></label>
+                        <input type="range" id="treeHeight" min="50" max="250" step="10" value="100">
+                    </div>
+                    <div class="setting-group">
+                        <label class="setting-title">나뭇잎 크기 <span class="val-badge" id="treeLeafVal">100%</span></label>
+                        <input type="range" id="treeLeafSize" min="10" max="200" step="10" value="100">
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>꽃 (Flower) 설정</summary>
+                <div class="details-content">
+                    <div class="setting-group">
+                        <label class="setting-title">생성 비율 <span class="val-badge" id="flowerRatioVal">30%</span></label>
+                        <input type="range" id="flowerRatio" min="0" max="100" step="5" value="30">
+                    </div>
+                    <div class="setting-group">
+                        <label class="setting-title">꽃 높이 <span class="val-badge" id="flowerHeightVal">100%</span></label>
+                        <input type="range" id="flowerHeight" min="50" max="250" step="10" value="100">
+                    </div>
+                    <div class="setting-group">
+                        <label class="setting-title">꽃봉오리 크기 <span class="val-badge" id="flowerBudVal">100%</span></label>
+                        <input type="range" id="flowerBudSize" min="10" max="200" step="10" value="100">
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>풀 (Grass) 설정</summary>
+                <div class="details-content">
+                    <div class="setting-group">
+                        <label class="setting-title">생성 비율 <span class="val-badge" id="grassRatioVal">40%</span></label>
+                        <input type="range" id="grassRatio" min="0" max="100" step="5" value="40">
+                    </div>
+                    <div class="setting-group">
+                        <label class="setting-title">풀 높이 <span class="val-badge" id="grassHeightVal">100%</span></label>
+                        <input type="range" id="grassHeight" min="50" max="250" step="10" value="100">
+                    </div>
+                </div>
+            </details>
+        </div>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
